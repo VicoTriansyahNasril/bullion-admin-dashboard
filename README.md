@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# Bullion Dashboard - Front End Technical Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositori ini berisi untuk menjawab tes teknis Front End Web Developer di PT Bullion Ecosystem International.
+## 🛠 Tech Stack
 
-Currently, two official plugins are available:
+- **Framework:** ReactJS (Vite)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** TanStack Query (React Query)
+- **Forms:** React Hook Form + Yup Validation
+- **HTTP Client:** Axios (Interceptors configured)
+- **Security:** Crypto-JS (SHA-256 Password Hashing)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fitur Utama
 
-## React Compiler
+- **Autentikasi:** Halaman Login & Register aman dengan enkripsi password SHA-256.
+- **Manajemen User:** Melihat daftar user, melihat detail, dan mengedit data user menggunakan Modal interaktif.
+- **UI/UX:** Komponen Input kustom, Navigasi Sidebar, dan tata letak responsif yang sesuai dengan desain Figma.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 Struktur Folder
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── assets/         # Aset gambar (Background, Logo, Icon SVG)
+├── components/     # Komponen UI Reusable (Button, Input, Modal, dll)
+├── features/       # Komponen fitur spesifik (UserForm, UserTable, DetailView)
+├── layouts/        # Layout utama aplikasi (DashboardLayout dengan Sidebar)
+├── lib/            # Konfigurasi library (Axios Instance, Utils, Security)
+├── pages/          # Halaman utama (Login, Register, Dashboard)
+├── routes/         # Konfigurasi routing & proteksi halaman (PrivateRoute)
+├── schemas/        # Skema validasi form (Yup Schema)
+├── services/       # Logika pemanggilan API (Auth & User Service)
+└── types/          # Definisi Tipe Data TypeScript (Interfaces)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Cara Menjalankan
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+
+3.  **Buka di browser:** `http://localhost:5173`
