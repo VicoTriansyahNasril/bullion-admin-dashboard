@@ -1,6 +1,3 @@
-# Bullion Dashboard - Front End Technical Test
-
-Repositori ini berisi untuk menjawab tes teknis Front End Web Developer di PT Bullion Ecosystem International.
 ## 🛠 Tech Stack
 
 - **Framework:** ReactJS (Vite)
@@ -10,12 +7,6 @@ Repositori ini berisi untuk menjawab tes teknis Front End Web Developer di PT Bu
 - **Forms:** React Hook Form + Yup Validation
 - **HTTP Client:** Axios (Interceptors configured)
 - **Security:** Crypto-JS (SHA-256 Password Hashing)
-
-## 🚀 Fitur Utama
-
-- **Autentikasi:** Halaman Login & Register aman dengan enkripsi password SHA-256.
-- **Manajemen User:** Melihat daftar user, melihat detail, dan mengedit data user menggunakan Modal interaktif.
-- **UI/UX:** Komponen Input kustom, Navigasi Sidebar, dan tata letak responsif yang sesuai dengan desain Figma.
 
 ## 📂 Struktur Folder
 
